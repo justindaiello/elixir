@@ -13,7 +13,12 @@ defmodule Servy.Handler do
   end
 
   def parse(request) do 
-    conv = %{method: "GET", path: "/wildthings", resp_body: ""}
+    [method, path, _] = 
+    request 
+    |> String.split("\n") 
+    |> List.first
+    |> String.split(" ")
+    %{method: method, path: patch, resp_body: ""}
   end
 
   def route(conv) do 
