@@ -34,7 +34,6 @@ defmodule Servy.Handler do
     #{conv.resp_body}
     """
   end
-  
 end
 
 request = """
